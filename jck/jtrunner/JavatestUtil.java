@@ -643,10 +643,10 @@ public class JavatestUtil {
 			if ( tests.contains("api/java_net") || tests.contains("api/java_nio") || tests.equals("api") ) {
 				generatedJti.setProperty("jck.env.runtime.net.localHostName", hostname);
 				generatedJti.setProperty("jck.env.runtime.net.localHostIPAddr", ipAddress);
-				generatedJti.setProperty("jck.env.runtime.net.testHost1Name", testHost1Name);
-				generatedJti.setProperty("jck.env.runtime.net.testHost1IPAddr", testHost1Ip);
-				generatedJti.setProperty("jck.env.runtime.net.testHost2Name", testHost2Name);
-				generatedJti.setProperty("jck.env.runtime.net.testHost2IPAddr", testHost2Ip);
+				generatedJti.setProperty("jck.env.runtime.net.testHost1Name", "localhost");
+				generatedJti.setProperty("jck.env.runtime.net.testHost1IPAddr", "127.0.0.1");
+				generatedJti.setProperty("jck.env.runtime.net.testHost2Name", "localhost");
+				generatedJti.setProperty("jck.env.runtime.net.testHost2IPAddr", "127.0.0.1");
 			}
 			
 			if ( tests.contains("api/java_net") || tests.equals("api") ) {
