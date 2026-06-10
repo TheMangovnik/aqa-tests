@@ -22,7 +22,7 @@
     <command>
     echo "TESTING DSLADKY"; \
     echo "DSLADKY STARTING FTP"; \
-    python /simple_ftp.py &amp; \
+    python /tmp/simple_ftp.py &amp; \
     SCRIPT_PID=$!; \
     $(GEN_JTB_GENERIC) testsuite=RUNTIME tests="$(JCKRUNTIME_CUSTOM_TARGET)" isCustomTarget="isCustomTarget"; \
 		$(EXEC_RUNTIME_TEST_WITH_AGENT); \
