@@ -21,6 +21,10 @@
 		</variations>
     <command>
     echo "TESTING DSLADKY"; \
+    cleanup() { kill $SCRIPT_PID 2&gt;/dev/null || true; }; \
+    trap cleanup EXIT; \
+    python /home/dsladky/simple_ftp.py &amp; \
+    SCRIPT_PID=$!; \
     $(GEN_JTB_GENERIC) testsuite=RUNTIME tests="$(JCKRUNTIME_CUSTOM_TARGET)" isCustomTarget="isCustomTarget"; \
 		$(EXEC_RUNTIME_TEST_WITH_AGENT); \
 		$(TEST_STATUS); \
