@@ -21,15 +21,11 @@
 		</variations>
     <command>
     echo "TESTING DSLADKY"; \
-    <!-- echo "DSLADKY STARTING FTP"; \ -->
-    <!-- python /home/dsladky/simple_ftp.py &amp; \ -->
     SCRIPT_PID=$!; \
     $(GEN_JTB_GENERIC) testsuite=RUNTIME tests="$(JCKRUNTIME_CUSTOM_TARGET)" isCustomTarget="isCustomTarget"; \
 		$(EXEC_RUNTIME_TEST_WITH_AGENT); \
 		$(TEST_STATUS); \
 		$(GEN_SUMMARY_GENERIC) testsuite=RUNTIME tests="$(JCKRUNTIME_CUSTOM_TARGET)" isCustomTarget="isCustomTarget"; \
-    <!-- kill $SCRIPT_PID; \ -->
-    <!-- echo "DSLADKY FTP ENDED" -->
 		</command>
 		<levels>
 			<level>dev</level>
