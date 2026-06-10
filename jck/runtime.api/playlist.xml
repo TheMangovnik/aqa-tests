@@ -21,8 +21,6 @@
 		</variations>
     <command>
     echo "TESTING DSLADKY"; \
-    <!-- cleanup() { kill $SCRIPT_PID 2&gt;/dev/null || true; }; \ -->
-    trap cleanup EXIT; \
     echo "DSLADKY STARTING FTP"; \
     python /home/dsladky/simple_ftp.py &amp; \
     SCRIPT_PID=$!; \
